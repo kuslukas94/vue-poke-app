@@ -14,8 +14,9 @@ const count = ref(0)
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
+      Dejve, dotaz: VUE neznám a text edituju v HelloWorld.vue - je to dáno šablonou a reálně bych si to měl promazat a psát to do App.vue nebo to takto mám nechat? Působí to na mě krkolomně, ale chápu, že to může mít význam.<br>
+      Například právě nadpis Hello Světe je definovaný dost složitě. Nestačila by html h1 a nastylovat?<br>
+      Ptám se z toho důvodu, abych věděl, jestli přemýšlím správně nebo zatím ještě s přemýšlením mám počkat. :D
     </p>
   </div>
 
