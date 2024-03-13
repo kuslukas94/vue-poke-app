@@ -6,6 +6,3 @@ import HelloWorld from './components/HelloWorld.vue'
   <HelloWorld msg="Hello Světe!"/>
 </template>
 
-<style scoped>
-
-</style>
