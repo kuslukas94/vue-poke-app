@@ -1,7 +1,24 @@
 <script setup>
 import { ref } from 'vue'
 
-const pikachuevo = ref([{ evo: 'Pikachu' }, { evo: 'Raichu' }, { evo: 'Pichu'}])
+// Pikachu evolution list
+const pikachuevo = ref([
+    { evo: 'Pikachu' },
+    { evo: 'Raichu' },
+    { evo: 'Pichu'},
+    ])
+
+//FETCH DATA FROM POKEAPI
+fetch("https://pokeapi.co/api/v2/pokemon/raichu")
+    .then(response => {
+
+        if(!response.ok){
+            throw new Error("Could not fetch resource");
+        }
+        return response.json();
+    })
+    .then(data => console.log(data))
+    .catch(error => console.error(error))
 </script>
 
 <template>
