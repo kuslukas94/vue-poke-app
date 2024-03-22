@@ -1,28 +1,29 @@
 <script setup>
 import { ref } from 'vue'
 
-// Pikachu evolution list
-const pikachuevo = ref([
-    { evo: 'Pikachu' },
-    { evo: 'Raichu' },
-    { evo: 'Pichu'},
-    ])
+const pokemon = ref()
+
 
 //FETCH DATA FROM POKEAPI
-fetch("https://pokeapi.co/api/v2/pokemon/raichu")
-    .then(response => {
+fetchData();
 
+async function fetchData(){
+    try{
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
         if(!response.ok){
             throw new Error("Could not fetch resource");
         }
-        return response.json();
-    })
-    .then(data => console.log(data))
-    .catch(error => console.error(error))
+        const pokemon = await response.json();
+        console.log(pokemon);
+    }
+    catch(error){
+        console.error(error);
+    }
+}
 </script>
 
 <template>
-	<ul v-for="(item) in pikachuevo">
-  	{{ item.evo }}
-	</ul>
+	<div v-for="item in pokemon" :key="item.name">
+		<h2>{{ item.name }}</h2>
+	</div>
 </template>
