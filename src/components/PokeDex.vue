@@ -1,29 +1,34 @@
 <script setup>
 import { ref } from 'vue'
 
-const pokemon = ref()
+const pokemon = ref();
+const pokemonSpecific = ref([]);
+const pokemonType = ref([]);
 
+const getData = async () => {
+	const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=5&offset=0");
+	if (!res.ok) {
+		throw new Error("Could not fetch data.");
+	}
+	const data = await res.json();
 
-//FETCH DATA FROM POKEAPI
-fetchData();
+	pokemon.value = data.results;
 
-async function fetchData(){
-    try{
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
-        if(!response.ok){
-            throw new Error("Could not fetch resource");
-        }
-        const pokemon = await response.json();
-        console.log(pokemon);
-    }
-    catch(error){
-        console.error(error);
-    }
+	pokemon.value.forEach(async (element) => {
+		const pokemonData = await fetch(element.url);
+
+		const data = await pokemonData.json();
+		pokemonSpecific.value.push(data);
+		console.log(data);
+		});
+
 }
+getData();
+
 </script>
 
 <template>
-	<div v-for="item in pokemon" :key="item.name">
+	<div v-for="item in pokemonSpecific" :key="item.name">
 		<h2>{{ item.name }}</h2>
 	</div>
 </template>
