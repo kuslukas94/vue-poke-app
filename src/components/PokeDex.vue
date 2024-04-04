@@ -1,9 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 
+//Stores whole pokemon list
 const pokemon = ref();
+//Stores information about Pokemons from the list
 const pokemonSpecific = ref([]);
-const pokemonType = ref([]);
 
 const getData = async () => {
 	const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=5&offset=0");
@@ -21,14 +22,21 @@ const getData = async () => {
 		pokemonSpecific.value.push(data);
 		console.log(data);
 		});
-
-}
+	}
 getData();
-
 </script>
 
 <template>
-	<div v-for="item in pokemonSpecific" :key="item.name">
-		<h2>{{ item.name }}</h2>
+	<div v-for="pokemon in pokemonSpecific" :key="pokemon.id">
+
+		<img :src="pokemon.sprites.other.showdown.front_default" alt="Pokemon Sprites">
+		
+		<h2>{{ pokemon.name }}</h2>
+
+			<h3>#{{ pokemon.id }}</h3>	
+		
+			<h3 v-for="type in pokemon.types" :key="type.type.name">
+			{{ type.type.name }}
+			</h3>
 	</div>
 </template>
