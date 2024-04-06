@@ -7,7 +7,7 @@ const pokemon = ref();
 const pokemonSpecific = ref([]);
 
 const getData = async () => {
-	const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=5&offset=0");
+	const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=12&offset=0");
 	if (!res.ok) {
 		throw new Error("Could not fetch data.");
 	}
@@ -27,15 +27,15 @@ getData();
 </script>
 
 <template>
-	<div v-for="pokemon in pokemonSpecific" :key="pokemon.id">
+  <div v-for="pokemon in pokemonSpecific" :key="pokemon.id" class="pokeSlot">
+    <div class="pokeSpritesBlock">
+		  <img :src="pokemon.sprites.other.showdown.front_default" alt="Pokemon Sprites" class="pokeSprites">
+    </div>
+		<h2 class="pokeName">{{ pokemon.name }}</h2>
 
-		<img :src="pokemon.sprites.other.showdown.front_default" alt="Pokemon Sprites">
+			<h3 class="pokeId">#{{ pokemon.id }}</h3>	
 		
-		<h2>{{ pokemon.name }}</h2>
-
-			<h3>#{{ pokemon.id }}</h3>	
-		
-			<h3 v-for="type in pokemon.types" :key="type.type.name">
+			<h3 v-for="type in pokemon.types" :key="type.type.name" class="pokeType">
 			{{ type.type.name }}
 			</h3>
 	</div>
