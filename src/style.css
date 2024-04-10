@@ -14,15 +14,24 @@ body h1 {
 }
 
 .pokeSlot {
-  width: 33.3333333333%;
+  width: 25%;
+  border: 10px solid;
+  border-radius: 10px;
+  border-color: #fcd332;
   display: inline-block;
   background-color: #dedede;
   text-align: center;
+  margin: 2% 2% 2% 2%;
 }
 
 .pokeSpritesBlock {
-  height: 140px;
-  padding: 5% 0;
+  background-color: #fbfbfe;
+  height: 200px;
+}
+
+.pokeSprites {
+  width: 50%;
+  padding-top: 5%;
 }
 
 .pokeType {

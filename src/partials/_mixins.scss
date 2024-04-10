@@ -2,7 +2,11 @@
   width: 1200px;
   margin: 0 auto;
 }
-
 @mixin poke-box {
-  width: 4 * col-width();
+  width: 3 * col-width();
+}
+@mixin border-card {
+  border: 10px solid;
+  border-radius: 10px;
+  border-color: #fcd332;
 }

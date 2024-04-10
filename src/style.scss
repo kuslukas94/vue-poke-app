@@ -12,19 +12,22 @@ body {
     font-size: $big-font;
   }
 }
-
 .pokeSlot {
   @include poke-box;
+  @include border-card;
   display: inline-block;
   background-color: $secondary;
   text-align: center;
+  margin: 2% 2% 2% 2%;
 }
-
 .pokeSpritesBlock {
-  height: 140px;
-  padding: 5% 0;
+  background-color: $background;
+  height: 200px;
 }
-
+.pokeSprites {
+  width: 50%;
+  padding-top: 5%;
+}
 .pokeType {
   display: inline-block;
   padding: 0 15px;
