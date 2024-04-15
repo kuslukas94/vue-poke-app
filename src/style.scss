@@ -1,6 +1,10 @@
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/functions";
+@font-face {
+  font-family: "PokeFont";
+  src: url("/src/assets/pokefont.ttf");
+}
 
 body {
   background-color: $background;
@@ -9,6 +13,7 @@ body {
   h1 {
     color: $primary;
     text-align: center;
+    font-family: PokeFont, sans-serif;
     font-size: $big-font;
   }
 }
@@ -20,18 +25,26 @@ body {
   @include poke-box;
   @include border-card;
   display: inline-block;
-  background-color: $secondary;
   text-align: center;
   margin: 2% 2% 2% 2%;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position:center;
+  background-position-y: 50px;
+}
+@each $type, $styles in $types-bg-map {
+  .pokeSlot.#{$type} {
+    @each $property, $value in $styles {
+      #{$property}: $value;
+    }
+  }
 }
 .pokeSpritesBlock {
-  background-color: $background;
   height: 200px;
   margin: 25px 25px;
 }
 .pokeSprites {
-  width: 50%;
-  padding-top: 5%;
+  width: 70%;
 }
 .pokeType {
   display: inline-block;

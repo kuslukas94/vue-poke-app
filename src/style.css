@@ -1,6 +1,10 @@
 /* --- COLORS --- */
 /* --- FONTS --- */
 /* --- POKEMON TYPES COLORS --- */
+@font-face {
+  font-family: "PokeFont";
+  src: url("/src/assets/pokefont.ttf");
+}
 body {
   background-color: #fbfbfe;
   color: #040316;
@@ -10,7 +14,8 @@ body {
 body h1 {
   color: #9d1515;
   text-align: center;
-  font-size: 48px;
+  font-family: PokeFont, sans-serif;
+  font-size: 68px;
 }
 
 .pokeName {
@@ -24,20 +29,93 @@ body h1 {
   border-radius: 10px;
   border-color: #fcd332;
   display: inline-block;
-  background-color: #e8dada;
   text-align: center;
   margin: 2% 2% 2% 2%;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+  background-position-y: 50px;
+}
+
+.pokeSlot.fire {
+  background-image: url("/public/Pokemon_Type_Icon_Fire.svg");
+}
+
+.pokeSlot.water {
+  background-image: url("/public/Pokemon_Type_Icon_Water.svg");
+}
+
+.pokeSlot.grass {
+  background-image: url("/public/Pokemon_Type_Icon_Grass.svg");
+}
+
+.pokeSlot.normal {
+  background-image: url("/public/Pokemon_Type_Icon_Normal.svg");
+}
+
+.pokeSlot.electric {
+  background-image: url("/public/Pokemon_Type_Icon_Electric.svg");
+}
+
+.pokeSlot.ice {
+  background-image: url("/public/Pokemon_Type_Icon_Ice.svg");
+}
+
+.pokeSlot.fighting {
+  background-image: url("/public/Pokemon_Type_Icon_Fighting.svg");
+}
+
+.pokeSlot.poison {
+  background-image: url("/public/Pokemon_Type_Icon_Poison.svg");
+}
+
+.pokeSlot.ground {
+  background-image: url("/public/Pokemon_Type_Icon_Ground.svg");
+}
+
+.pokeSlot.flying {
+  background-image: url("/public/Pokemon_Type_Icon_Flying.svg");
+}
+
+.pokeSlot.psychic {
+  background-image: url("/public/Pokemon_Type_Icon_Psychic.svg");
+}
+
+.pokeSlot.bug {
+  background-image: url("/public/Pokemon_Type_Icon_Bug.svg");
+}
+
+.pokeSlot.rock {
+  background-image: url("/public/Pokemon_Type_Icon_Rock.svg");
+}
+
+.pokeSlot.ghost {
+  background-image: url("/public/Pokemon_Type_Icon_Ghost.svg");
+}
+
+.pokeSlot.dragon {
+  background-image: url("/public/Pokemon_Type_Icon_Dragon.svg");
+}
+
+.pokeSlot.dark {
+  background-image: url("/public/Pokemon_Type_Icon_Dark.svg");
+}
+
+.pokeSlot.steel {
+  background-image: url("/public/Pokemon_Type_Icon_Steel.svg");
+}
+
+.pokeSlot.fairy {
+  background-image: url("/public/Pokemon_Type_Icon_Fairy.svg");
 }
 
 .pokeSpritesBlock {
-  background-color: #fbfbfe;
   height: 200px;
   margin: 25px 25px;
 }
 
 .pokeSprites {
-  width: 50%;
-  padding-top: 5%;
+  width: 70%;
 }
 
 .pokeType {
@@ -46,56 +124,56 @@ body h1 {
   border-radius: 10px;
 }
 .pokeType.fire {
-  background-color: #ff4422;
+  background-color: #fe9c54;
 }
 .pokeType.water {
-  background-color: #3399fe;
+  background-color: #4c8fd4;
 }
 .pokeType.grass {
-  background-color: #76cc55;
+  background-color: #63bb5b;
 }
 .pokeType.normal {
-  background-color: #aaaa99;
+  background-color: #9099a1;
 }
 .pokeType.electric {
-  background-color: #ffcc33;
+  background-color: #f3d23b;
 }
 .pokeType.ice {
-  background-color: #65ccff;
+  background-color: #74cec0;
 }
 .pokeType.fighting {
-  background-color: #ba5544;
+  background-color: #cd4069;
 }
 .pokeType.poison {
-  background-color: #aa5599;
+  background-color: #ab6ac8;
 }
 .pokeType.ground {
-  background-color: #dcbb54;
+  background-color: #d97745;
 }
 .pokeType.flying {
-  background-color: #8898ff;
+  background-color: #92aade;
 }
 .pokeType.psychic {
-  background-color: #ff5599;
+  background-color: #f97176;
 }
 .pokeType.bug {
-  background-color: #aaba23;
+  background-color: #8fc12c;
 }
 .pokeType.rock {
-  background-color: #bbaa66;
+  background-color: #c6b78b;
 }
 .pokeType.ghost {
-  background-color: #6666ba;
+  background-color: #5268ac;
 }
 .pokeType.dragon {
-  background-color: #7666ee;
+  background-color: #0a6cc4;
 }
 .pokeType.dark {
   background-color: #775444;
 }
 .pokeType.steel {
-  background-color: #aaaabb;
+  background-color: #5a8ea1;
 }
 .pokeType.fairy {
-  background-color: #ee99ee;
+  background-color: #ec8ee6;
 }/*# sourceMappingURL=style.css.map */

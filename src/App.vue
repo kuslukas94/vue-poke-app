@@ -4,7 +4,7 @@ import PokeDex from './components/PokeDex.vue'
 </script>
 
 <template>
-  <HelloWorld msg="Pokédex in progress!"/>
+  <HelloWorld msg="Pokédex Vue App!"/>
   <PokeDex />
 </template>
 

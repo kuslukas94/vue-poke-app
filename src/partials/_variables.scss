@@ -5,27 +5,83 @@ $primary: #9d1515;
 $secondary: #e8dada;
 $accent: #bf5f36;
 /* --- FONTS --- */
-$big-font: 48px;
+$big-font: 68px;
 $medium-font: 24px;
 $small-font: 12px;
 /* --- POKEMON TYPES COLORS --- */
+$types-bg-map: (
+  fire: (
+    background-image: url("/public/Pokemon_Type_Icon_Fire.svg")
+  ),
+  water: (
+    background-image: url("/public/Pokemon_Type_Icon_Water.svg")
+  ),
+  grass: (
+    background-image: url("/public/Pokemon_Type_Icon_Grass.svg")
+  ),
+  normal: (
+    background-image: url("/public/Pokemon_Type_Icon_Normal.svg")
+  ),
+  electric: (
+    background-image: url("/public/Pokemon_Type_Icon_Electric.svg")
+  ),
+  ice: (
+    background-image: url("/public/Pokemon_Type_Icon_Ice.svg")
+  ),
+  fighting: (
+    background-image: url("/public/Pokemon_Type_Icon_Fighting.svg")
+  ),
+  poison: (
+    background-image: url("/public/Pokemon_Type_Icon_Poison.svg")
+  ),
+  ground: (
+    background-image: url("/public/Pokemon_Type_Icon_Ground.svg")
+  ),
+  flying: (
+    background-image: url("/public/Pokemon_Type_Icon_Flying.svg")
+  ),
+  psychic: (
+    background-image: url("/public/Pokemon_Type_Icon_Psychic.svg")
+  ),
+  bug: (
+    background-image: url("/public/Pokemon_Type_Icon_Bug.svg")
+  ),
+  rock: (
+    background-image: url("/public/Pokemon_Type_Icon_Rock.svg")
+  ),
+  ghost: (
+    background-image: url("/public/Pokemon_Type_Icon_Ghost.svg")
+  ),
+  dragon: (
+    background-image: url("/public/Pokemon_Type_Icon_Dragon.svg")
+  ),
+  dark: (
+    background-image: url("/public/Pokemon_Type_Icon_Dark.svg")
+  ),
+  steel: (
+    background-image: url("/public/Pokemon_Type_Icon_Steel.svg")
+  ),
+  fairy: (
+    background-image: url("/public/Pokemon_Type_Icon_Fairy.svg")
+  ),
+);
 $types-color-map: (
-  fire: #ff4422,
-  water: #3399fe,
-  grass: #76cc55,
-  normal: #aaaa99,
-  electric: #ffcc33,
-  ice: #65ccff,
-  fighting: #ba5544,
-  poison: #aa5599,
-  ground: #dcbb54,
-  flying: #8898ff,
-  psychic: #ff5599,
-  bug: #aaba23,
-  rock: #bbaa66,
-  ghost: #6666ba,
-  dragon: #7666ee,
+  fire: #fe9c54,
+  water: #4c8fd4,
+  grass: #63bb5b,
+  normal: #9099a1,
+  electric: #f3d23b,
+  ice: #74cec0,
+  fighting: #cd4069,
+  poison: #ab6ac8,
+  ground: #d97745,
+  flying: #92aade,
+  psychic: #f97176,
+  bug: #8fc12c,
+  rock: #c6b78b,
+  ghost: #5268ac,
+  dragon: #0a6cc4,
   dark: #775444,
-  steel: #aaaabb,
-  fairy: #ee99ee,
+  steel: #5a8ea1,
+  fairy: #ec8ee6,
 );
