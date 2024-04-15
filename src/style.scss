@@ -12,6 +12,10 @@ body {
     font-size: $big-font;
   }
 }
+.pokeName {
+  text-align: left;
+  padding-left: 25px;
+}
 .pokeSlot {
   @include poke-box;
   @include border-card;
@@ -23,6 +27,7 @@ body {
 .pokeSpritesBlock {
   background-color: $background;
   height: 200px;
+  margin: 25px 25px;
 }
 .pokeSprites {
   width: 50%;
@@ -30,6 +35,12 @@ body {
 }
 .pokeType {
   display: inline-block;
-  padding: 0 15px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  @each $type, $background-color in $types-color-map {
+    &.#{$type} {
+      @include type-color($type);
+    }
+  }
 }
 

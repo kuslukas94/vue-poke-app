@@ -14,6 +14,7 @@ const getData = async () => {
 	pokemon.value.forEach(async (element) => {
 		const pokemonData = await fetch(element.url);
 		const data = await pokemonData.json();
+    data.name = data.name.charAt(0).toUpperCase() + data.name.slice(1);
 		pokemonSpecific.value.push(data);
 		console.log(data);
 		});
@@ -23,12 +24,12 @@ getData();
 
 <template>
   <div v-for="pokemon in pokemonSpecific" :key="pokemon.id" class="pokeSlot">
+    <h2 class="pokeName">{{ pokemon.name }}</h2>
     <div class="pokeSpritesBlock">
 		  <img :src="pokemon.sprites.other.home.front_default" alt="Pokemon Sprites" class="pokeSprites">
     </div>
-		<h2 class="pokeName">{{ pokemon.name }}</h2>
 			<h3 class="pokeId">#{{ pokemon.id }}</h3>	
-			<h3 v-for="type in pokemon.types" :key="type.type.name" class="pokeType">
+			<h3 v-for="type in pokemon.types" :key="type.type.name" :class="['pokeType', type.type.name]">
 			{{ type.type.name }}
 			</h3>
 	</div>

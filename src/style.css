@@ -1,6 +1,6 @@
 /* --- COLORS --- */
 /* --- FONTS --- */
-/* --- SIZES --- */
+/* --- POKEMON TYPES COLORS --- */
 body {
   background-color: #fbfbfe;
   color: #040316;
@@ -13,13 +13,18 @@ body h1 {
   font-size: 48px;
 }
 
+.pokeName {
+  text-align: left;
+  padding-left: 25px;
+}
+
 .pokeSlot {
   width: 25%;
   border: 10px solid;
   border-radius: 10px;
   border-color: #fcd332;
   display: inline-block;
-  background-color: #dedede;
+  background-color: #e8dada;
   text-align: center;
   margin: 2% 2% 2% 2%;
 }
@@ -27,6 +32,7 @@ body h1 {
 .pokeSpritesBlock {
   background-color: #fbfbfe;
   height: 200px;
+  margin: 25px 25px;
 }
 
 .pokeSprites {
@@ -36,5 +42,60 @@ body h1 {
 
 .pokeType {
   display: inline-block;
-  padding: 0 15px;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.pokeType.fire {
+  background-color: #ff4422;
+}
+.pokeType.water {
+  background-color: #3399fe;
+}
+.pokeType.grass {
+  background-color: #76cc55;
+}
+.pokeType.normal {
+  background-color: #aaaa99;
+}
+.pokeType.electric {
+  background-color: #ffcc33;
+}
+.pokeType.ice {
+  background-color: #65ccff;
+}
+.pokeType.fighting {
+  background-color: #ba5544;
+}
+.pokeType.poison {
+  background-color: #aa5599;
+}
+.pokeType.ground {
+  background-color: #dcbb54;
+}
+.pokeType.flying {
+  background-color: #8898ff;
+}
+.pokeType.psychic {
+  background-color: #ff5599;
+}
+.pokeType.bug {
+  background-color: #aaba23;
+}
+.pokeType.rock {
+  background-color: #bbaa66;
+}
+.pokeType.ghost {
+  background-color: #6666ba;
+}
+.pokeType.dragon {
+  background-color: #7666ee;
+}
+.pokeType.dark {
+  background-color: #775444;
+}
+.pokeType.steel {
+  background-color: #aaaabb;
+}
+.pokeType.fairy {
+  background-color: #ee99ee;
 }/*# sourceMappingURL=style.css.map */

@@ -2,14 +2,30 @@
 $text: #040316;
 $background: #fbfbfe;
 $primary: #9d1515;
-$secondary: #dedede;
+$secondary: #e8dada;
 $accent: #bf5f36;
-
-
 /* --- FONTS --- */
 $big-font: 48px;
 $medium-font: 24px;
 $small-font: 12px;
-
-
-/* --- SIZES --- */
+/* --- POKEMON TYPES COLORS --- */
+$types-color-map: (
+  fire: #ff4422,
+  water: #3399fe,
+  grass: #76cc55,
+  normal: #aaaa99,
+  electric: #ffcc33,
+  ice: #65ccff,
+  fighting: #ba5544,
+  poison: #aa5599,
+  ground: #dcbb54,
+  flying: #8898ff,
+  psychic: #ff5599,
+  bug: #aaba23,
+  rock: #bbaa66,
+  ghost: #6666ba,
+  dragon: #7666ee,
+  dark: #775444,
+  steel: #aaaabb,
+  fairy: #ee99ee,
+);

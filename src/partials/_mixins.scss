@@ -10,3 +10,6 @@
   border-radius: 10px;
   border-color: #fcd332;
 }
+@mixin type-color($type) {
+  background-color: map-get($types-color-map, $type);
+}
