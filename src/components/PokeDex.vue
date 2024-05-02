@@ -11,14 +11,15 @@ const getData = async () => {
 	}
 	const data = await res.json();
 	pokemon.value = data.results;
-	pokemon.value.forEach(async (element) => {
-		const pokemonData = await fetch(element.url);
-		const data = await pokemonData.json();
+	const promises = pokemon.value.map(async (element) => {
+    const pokemonData = await fetch(element.url);
+    const data = await pokemonData.json();
     data.name = data.name.charAt(0).toUpperCase() + data.name.slice(1);
-		pokemonSpecific.value.push(data);
-		console.log(data);
-		});
-	}
+    return data;
+  });
+  const results = await Promise.all(promises);
+  pokemonSpecific.value = results.sort((a, b) => a.id - b.id);
+};
 getData();
 </script>
 
